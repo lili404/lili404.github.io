@@ -339,7 +339,7 @@ body.dark-mode {
 .skills {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 .work-experience .title,
 .education .title,
@@ -357,10 +357,10 @@ body.dark-mode {
   font-weight: 400;
   color: var(--sec-text-color);
 }
-.work-experience .position:not(:first-child),
-.education .position:not(:first-child),
-.skills .position:not(:first-child) {
-  margin-top: 1rem;
+.work-experience .position:not(:first-of-type),
+.education .position:not(:first-of-type),
+.skills .position:not(:first-of-type) {
+  margin-top: 1.25rem;
 }
 
 .company-1,

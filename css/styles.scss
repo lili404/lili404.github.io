@@ -339,7 +339,7 @@ body {
 .skills {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 
   .title {
     font-size: var(--heading-font-size);
@@ -354,8 +354,8 @@ body {
     font-weight: 400;
     color: var(--sec-text-color);
 
-    &:not(:first-child) {
-      margin-top: 1rem;
+    &:not(:first-of-type) {
+      margin-top: 1.25rem;
     }
   }
 }
