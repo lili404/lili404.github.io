@@ -10,8 +10,14 @@
 
     <title>Matt Vaughn's Resume</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
     <script src="./js/scripts.js" defer></script>
   </head>
 
@@ -20,22 +26,32 @@
       <ul class="links">
         <li>
           <a href="#about" aria-label="Go to profile section">
-            <i class="fas fa-user"></i>
+            <svg class="icon">
+              <use xlink:href="./assets/icons/sprite.svg#user"></use>
+            </svg>
           </a>
         </li>
         <li>
           <a href="#workexperience" aria-label="Go to work experience section">
-            <i class="fas fa-tools"></i>
+            <svg class="icon">
+              <use
+                xlink:href="./assets/icons/sprite.svg#screwdriver-wrench"
+              ></use>
+            </svg>
           </a>
         </li>
         <li>
           <a href="#education" aria-label="Go to education section">
-            <i class="fas fa-book"></i>
+            <svg class="icon">
+              <use xlink:href="./assets/icons/sprite.svg#book"></use>
+            </svg>
           </a>
         </li>
         <li>
           <a href="#skills" aria-label="Go to skills section">
-            <i class="fas fa-code"></i>
+            <svg class="icon">
+              <use xlink:href="./assets/icons/sprite.svg#code"></use>
+            </svg>
           </a>
         </li>
       </ul>
@@ -55,31 +71,43 @@
             aria-label="Change theme mode"
             onclick="toggleDarkMode()"
           >
-            <i class="fas fa-sun" id="light-icon"></i>
-            <i class="fas fa-moon" id="dark-icon"></i>
+            <svg class="icon" id="dark-icon">
+              <use xlink:href="./assets/icons/sprite.svg#moon"></use>
+            </svg>
+            <svg class="icon" id="light-icon">
+              <use xlink:href="./assets/icons/sprite.svg#sun"></use>
+            </svg>
           </button>
         </section>
         <section class="about-wrapper">
           <h2 class="job-title">Software Engineer</h2>
           <address class="contact-info">
             <span>
-              <i class="fas fa-map-marker-alt"></i>
+              <svg class="icon">
+                <use xlink:href="./assets/icons/sprite.svg#location-dot"></use>
+              </svg>
               Austin, TX
             </span>
             <span>
               <a href="https://github.com/matt" target="_blank">
-                <i class="fab fa-github"></i>
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/sprite.svg#github"></use>
+                </svg>
                 github.com/matt
               </a>
             </span>
             <span>
               <a href="mailto:matt@email.com" target="_blank">
-                <i class="fas fa-envelope"></i>
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/sprite.svg#envelope"></use>
+                </svg>
                 matt@email.com
               </a>
             </span>
             <span>
-              <i class="fas fa-phone"></i>
+              <svg class="icon">
+                <use xlink:href="./assets/icons/sprite.svg#phone"></use>
+              </svg>
               555-555-5555
             </span>
           </address>
@@ -192,53 +220,123 @@
             </ul>
             <ul class="rating">
               <li>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
               </li>
               <li>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
               </li>
               <li>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
               </li>
               <li>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star"></i>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
               </li>
               <li>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star"></i>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
               </li>
               <li>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
               </li>
               <li>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star checked"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon checked">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/sprite.svg#star"></use>
+                </svg>
               </li>
             </ul>
           </div>
