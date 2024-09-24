@@ -1,11 +1,13 @@
+@import url('../assets/fonts/Golos/Golos.css');
+
 :root {
+  --body-color: #cccdce;
   --main-bg-color: #f4f4f4;
   --main-text-color: #2c2c2c;
   --sec-text-color: #5f5f5f;
   --section-heading-color: #808080;
   --lightgray-color: #cacaca;
-  --blue-color: #0070f0;
-  --lightblue-color: #4099ff;
+  --blue-color: #0060dd;
   --heading-font-size: 1.25rem;
   --text-font-size: 1rem;
   --black-shadow: 0rem 0rem 1rem #2c2c2c75;
@@ -32,7 +34,6 @@ p,
 li,
 span {
   font-family: 'Golos Text', sans-serif;
-  font-display: swap;
 }
 
 a,
@@ -44,28 +45,30 @@ div {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-i.fa {
+i.fas,
+i.fab {
+  transition: color 0.3s ease;
   font-size: 0.8125rem;
 }
 
 .checked {
-  color: var(--blue-color);
+  color: var(--blue-color) !important;
 }
 
 body {
   display: flex;
   justify-content: center;
-  background-color: var(--blue-color);
+  background-color: var(--body-color);
   transition: background-color 0.3s ease;
 
   &.dark-mode {
+    --body-color: #353535;
     --main-bg-color: #252525;
     --main-text-color: #f0f0f0;
     --sec-text-color: #aaaaaa;
     --section-heading-color: #b3b3b3;
     --lightgray-color: #3d3d3d;
-    --blue-color: #3091ff;
-    --lightblue-color: #3091ff;
+    --blue-color: #99bcff;
   }
 
   @media (min-width: 1025px) {
@@ -95,20 +98,21 @@ body {
   background-color: var(--main-bg-color);
   box-shadow: var(--black-shadow);
 
-  a {
-    width: 4rem;
-    height: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.5rem;
-    color: var(--blue-color);
-    transition: background-color 0.3s, border-radius 0.3s;
+  li {
+    list-style-type: none;
 
-    li {
-      list-style-type: none;
+    a {
+      width: 4rem;
+      height: 3.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1.5rem;
+      color: var(--blue-color);
+      transition: background-color 0.3s, border-radius 0.3s;
+      text-decoration: none;
 
-      i {
+      i.fas {
         font-size: 1rem;
         color: var(--main-text-color);
       }
@@ -135,7 +139,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
 
-  i.fa {
+  i.fas {
     font-size: 1.25rem;
   }
 
@@ -232,15 +236,23 @@ body {
   }
 }
 
-.contact-info {
-  span a {
-    transition: color 0.3s;
+.contact-info,
+.position {
+  span {
+    a {
+      transition: color 0.3s;
 
-    &:hover {
-      color: var(--blue-color);
+      &:hover {
+        color: var(--blue-color);
+      }
+    }
+    &:not(:last-child)::after {
+      content: '|';
+      margin: 0 0.25rem;
     }
   }
-  @media (min-width: 769px) and (max-width: 850px) {
+
+  @media (max-width: 640px), (min-width: 769px) and (max-width: 850px) {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -252,28 +264,9 @@ body {
   }
 }
 
-.contact-info,
-.position {
-  span:not(:last-child)::after {
-    content: '|';
-    margin: 0 0.25rem;
-  }
-
-  @media (max-width: 640px) {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-
-    span:not(:last-child)::after {
-      content: '';
-      margin: 0 0.25rem;
-    }
-  }
-}
-
 .about-wrapper,
 .main {
-  @media (min-width: 769px) {
+  @media (min-width: 1025px) {
     margin-left: 6rem;
   }
 }
@@ -397,6 +390,11 @@ body {
     color: var(--main-text-color);
     font-size: var(--text-font-size);
     padding: 1rem 0.5rem;
+    transition: border-bottom 0.3s ease;
+
+    i.fas {
+      color: var(--lightgray-color);
+    }
 
     &:first-child {
       padding: 0 0.5rem 1rem 0.5rem;
