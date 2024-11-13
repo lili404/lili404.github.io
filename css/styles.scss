@@ -23,7 +23,6 @@
 }
 
 html {
-  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -34,6 +33,10 @@ li,
 span {
   font-family: 'Golos Text', sans-serif;
   transition: color 0.3s ease;
+}
+
+p {
+  line-height: 1.5rem;
 }
 
 a,
@@ -190,17 +193,21 @@ body {
 
 .profile-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   align-items: center;
+  padding: 0 0 0.5rem;
 
   @media (min-width: 481px) {
+    flex-direction: row;
     gap: 2rem;
   }
 }
 
 .pfp {
-  width: 2rem;
-  height: 2rem;
+  width: 20%;
+  height: auto;
+  max-width: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,20 +217,8 @@ body {
     height: 100%;
     object-fit: cover;
   }
-
-  @media (min-width: 350px) {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  @media (min-width: 400px) {
-    width: 3rem;
-    height: 3rem;
-  }
-
   @media (min-width: 481px) {
-    width: 4rem;
-    height: 4rem;
+    width: 10%;
   }
 }
 
@@ -283,7 +278,7 @@ body {
   gap: 0.75rem;
 
   .job-title {
-    font-size: var(--text-font-size);
+    font-size: var(--texat-font-size);
     font-weight: 400;
     color: var(--main-text-color);
   }
@@ -380,6 +375,17 @@ body {
     &:not(:first-child) {
       margin-top: 0.5rem;
     }
+  }
+}
+
+.education {
+  .institution-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .title {
+    height: fit-content;
   }
 }
 
